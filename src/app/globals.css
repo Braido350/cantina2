@@ -45,7 +45,7 @@
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
+  --background: oklch(96.416% 0.00011 271.152);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
@@ -79,7 +79,7 @@
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
+  --background: oklch(23.929% 0.00003 271.152);
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.205 0 0);
   --card-foreground: oklch(0.985 0 0);
@@ -110,6 +110,30 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+}
+
+.backgroundHeader {
+  @apply size-full bg-blue-300 dark:bg-blue-950 ;
+}
+
+.textoPrincipal{
+  @apply text-2xl font-bold text-center text-blue-950 dark:text-blue-100;
+}
+
+.botoesDestaques{
+  @apply flex flex-col items-center justify-center gap-4 p-4 bg-blue-600 dark:bg-blue-400;
+}
+
+.botoesHover{
+  @apply hover:bg-blue-700 dark:hover:bg-blue-500 transition-colors duration-300;
+}
+
+.borda{
+  @apply border-2 border-blue-500 dark:border-blue-300 rounded-lg p-4;
+}
+
+.cartoes{
+  @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 bg-blue-100 dark:bg-blue-900;
 }
 
 @layer base {
