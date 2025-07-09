@@ -13,7 +13,12 @@ import {
 } from "@/components/ui/navigation-menu"
 import { LoginHome } from "../login";
 
+
 export default function Header() {
+
+ const autenticado: boolean = false;
+
+
   return (
     <header className="backgroundHeader">
 <div className="flex items-center justify-between max-w-7xl p-4 mx-auto">
@@ -22,6 +27,7 @@ export default function Header() {
           Cantina
         </h1>
       </Link>
+      {autenticado ? (
 <NavigationMenu viewport={false}>
   <NavigationMenuList>
 <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
@@ -62,6 +68,19 @@ export default function Header() {
           </NavigationMenuLink> 
   </NavigationMenuList>
 </NavigationMenu>
+): (
+      <NavigationMenu viewport={false}>
+        <NavigationMenuList>
+          <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+            <Link href="/">Produtos</Link>
+          </NavigationMenuLink>
+          <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+            <Link href="/">Sobre</Link>
+          </NavigationMenuLink>
+        </NavigationMenuList>
+      </NavigationMenu>
+)
+}
 <div className="flex items-center gap-1">
 <LoginHome/>
 <ModeToggle/>
