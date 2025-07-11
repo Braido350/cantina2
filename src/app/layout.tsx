@@ -38,7 +38,7 @@ export default function RootLayout({
         disableTransitionOnChange
       >
         <Header />
-        <main className="flex-1">
+        <main className="flex-1 w-full h-full">
         {children}
         </main>
       </ThemeProvider>

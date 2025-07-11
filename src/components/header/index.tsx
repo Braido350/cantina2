@@ -22,7 +22,7 @@ export default function Header() {
 <div className="flex items-center justify-between max-w-7xl p-4 mx-auto">
 <Link href="/" className="hidden md:flex">
         <h1 className="textoPrincipal">
-          Cantina
+          *LOGO*
         </h1>
       </Link>
       {autenticado ? (
